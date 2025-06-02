@@ -13,7 +13,7 @@ terraform {
 }
 
 provider "azurerm" {
-  # subscription_id = var.provider_credentials.subscription_id
+  subscription_id = "9eb32675-efcd-4315-baf1-f58c4adbda67"
   # tenant_id       = var.provider_credentials.tenant_id
   # client_id       = var.provider_credentials.sp_client_id
   # client_secret   = var.provider_credentials.sp_client_secret
