@@ -93,16 +93,6 @@ resource "azurerm_linux_virtual_machine" "zone1" {
   }
 }
 
-
-
-# Associate VMs to Backend Pool
-resource "azurerm_network_interface_backend_address_pool_association" "zone1" {
-  count                   = 1
-  network_interface_id    = azurerm_network_interface.zone1[count.index].id
-  ip_configuration_name   = "internal"
-  backend_address_pool_id = azurerm_lb_backend_address_pool.main.id
-}
-
 # Output
 
 output "vm_admin_password" {
